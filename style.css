@@ -1,16 +1,39 @@
-/* CSS Untuk Tampilan Dark */
-body.dark-mode {
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Link */
+a {
+  color: #3498db;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+/* Form */
+input, textarea {
   background-color: #1a1a1a;
   color: #ffffff;
+  border: 1px solid #2c3e50;
 }
 
-.dark-mode #messages {
-  background-color: #222222;
+/* Button */
+button {
+  background-color: #3498db;
   color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.dark-mode input,
-.dark-mode button {
-  background-color: #444444;
-  color: #ffffff;
+button:hover {
+  background-color: #2980b9;
 }
