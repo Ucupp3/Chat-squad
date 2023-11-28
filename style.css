@@ -1,0 +1,16 @@
+/* CSS Untuk Tampilan Dark */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode #messages {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #444444;
+  color: #ffffff;
+}
