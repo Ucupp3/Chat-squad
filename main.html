@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Chatting</title>
+    <style>
+        #chatbox {
+            height: 300px;
+            width: 400px;
+            border: 1px solid black;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Website Chatting</h1>
+    <label for="username">Nama Pengguna:</label>
+    <input type="text" id="username" placeholder="Masukkan nama pengguna">
+    <br><br>
+    <div id="chatbox"></div>
+    <br>
+    <input type="text" id="message" placeholder="Ketik pesan...">
+    <button onclick="sendMessage()">Kirim</button>
+
+    <script>
+        // Mendapatkan elemen-elemen yang diperlukan
+        var usernameInput = document.getElementById("username");
+        var chatbox = document.getElementById("chatbox");
+        var messageInput = document.getElementById("message");
+
+        // Mendefinisikan variabel untuk menyimpan riwayat chat
+        var chatHistory = [];
+
+        // Fungsi untuk mengirim pesan
+        function sendMessage() {
+            try {
+                var username = usernameInput.value;
+                var message = messageInput.value;
+
+                // Memastikan nama pengguna dan pesan tidak kosong
+                if (username === "" || message === "") {
+                    throw new Error("Nama pengguna dan pesan harus diisi");
+                }
+
+                // Menambahkan pesan ke riwayat chat
+                chatHistory.push(username + ": " + message);
+
+                // Menampilkan riwayat chat di chatbox
+                chatbox.innerHTML = chatHistory.join("<br>");
+
+                // Mengosongkan input pesan
+                messageInput.value = "";
+            } catch (error) {
+                // Menampilkan pesan kesalahan
+                alert(error.message);
+            }
+        }
+    </script>
+</body>
+</html>
